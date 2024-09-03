@@ -1,7 +1,6 @@
 class MainComponents{
 
     constructor() {
-        //List of Selectors
        this.selectors = {
         username:"xpath://input[@id='user-name']",
         password:"xpath://input[@id='password']",
@@ -9,13 +8,9 @@ class MainComponents{
         errorhandling:"xpath://div//h3[contains(@data-test, 'error')]",
        }
     }
-    //Function for selecting specific selectors
+
     item(el){
         return $(this.selectors[el.toLowerCase()]);
-    }
-    //Set up of inseted data
-    getUserData(){
-        return [{ username: 'standard_user', password: 'secret_sauce', expectedTitle: 'Swag Labs'}]
     }
 }
 
